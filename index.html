@@ -1,0 +1,179 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pedro Henrique de Oliveira</title>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #111;
+      color: #ff5722;
+      font-family: 'Anton', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 40px;
+      font-size: 16px;
+      color: #ff5722;
+      opacity: 0;
+      animation: fadeIn 1.5s forwards;
+    }
+
+    .insta-icon {
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      color: #ff5722;
+      font-size: 18px;
+      transition: transform 0.3s ease;
+    }
+
+    .insta-icon:hover {
+      transform: scale(1.2) rotate(10deg);
+    }
+
+    main {
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .image-container {
+      position: relative;
+      width: 100%;
+      max-width: 1400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .foto-esquerda,
+    .foto-direita {
+      width: 350px;
+      height: auto;
+      object-fit: cover;
+      border-radius: 4px;
+      z-index: 1;
+      position: absolute;
+      transform: translateY(-50%);
+      opacity: 0;
+      animation: fadeSlide 1.5s forwards, float 4s ease-in-out infinite;
+    }
+
+   .foto-esquerda {
+    left: -4%;
+    top: 17%;
+    animation-delay: 0.5s;
+}
+
+    .foto-direita {
+      right: 2%;
+      top: 85%;
+      animation-delay: 0.8s;
+    }
+
+    .titulo {
+      font-size: 9vw;
+      line-height: 0.9;
+      color: #ff5722;
+      text-align: center;
+      text-transform: uppercase;
+      z-index: 2;
+      position: relative;
+      transform: skewX(-10deg);
+      pointer-events: none;
+      opacity: 0;
+      animation: fadeInUp 2s forwards 1s, glow 2.5s infinite alternate;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 0;
+      opacity: 0;
+      animation: fadeIn 1.5s forwards 2s;
+    }
+
+    .botao-trabalho {
+      color: #ff5722;
+      font-size: 20px;
+      text-decoration: none;
+      border: 2px solid #ff5722;
+      padding: 10px 20px;
+      border-radius: 4px;
+      transition: 0.3s;
+      display: inline-block;
+      margin-top: 20px;
+    }
+
+    .botao-trabalho:hover {
+      opacity: 0.7;
+      letter-spacing: 1px;
+      background-color: #ff5722;
+      color: #111;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px) skewX(-10deg); }
+      to { opacity: 1; transform: translateY(0) skewX(-10deg); }
+    }
+
+    @keyframes fadeSlide {
+      from { opacity: 0; transform: translateY(-50%) scale(0.9); }
+      to { opacity: 1; transform: translateY(-50%) scale(1); }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(-50%) translateY(0); }
+      50% { transform: translateY(-50%) translateY(-15px); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <span class="menu">PORTFÓLIO</span>
+    <a href="#" class="insta-icon">
+      <!-- Ícone Instagram moderno -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ff5722" viewBox="0 0 24 24">
+        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.056 1.97.24 2.432.403a4.92 4.92 0 011.675 1.01 4.92 4.92 0 011.01 1.676c.163.462.347 1.262.403 2.432.058 1.266.069 1.646.069 4.85s-.012 3.584-.07 4.85c-.056 1.17-.24 1.97-.403 2.432a4.902 4.902 0 01-1.01 1.675 4.902 4.902 0 01-1.675 1.01c-.462.163-1.262.347-2.432.403-1.266.058-1.646.069-4.85.069s-3.584-.012-4.85-.07c-1.17-.056-1.97-.24-2.432-.403a4.92 4.92 0 01-1.675-1.01 4.92 4.92 0 01-1.01-1.675c-.163-.462-.347-1.262-.403-2.432-.058-1.266-.069-1.646-.069-4.85s.012-3.584.07-4.85c.056-1.17.24-1.97.403-2.432a4.92 4.92 0 011.01-1.675 4.92 4.92 0 011.675-1.01c.462-.163 1.262-.347 2.432-.403 1.266-.058 1.646-.069 4.85-.069zm0-2.163C8.741 0 8.332.014 7.052.072 5.775.13 4.843.327 4.042.657a7.092 7.092 0 00-2.55 1.637 7.092 7.092 0 00-1.638 2.55c-.33.8-.526 1.733-.584 3.01C-.014 8.332 0 8.741 0 12s.014 3.668.072 4.948c.058 1.277.254 2.21.584 3.01a7.086 7.086 0 001.638 2.55 7.086 7.086 0 002.55 1.638c.8.33 1.733.526 3.01.584C8.332 23.986 8.741 24 12 24s3.668-.014 4.948-.072c1.277-.058 2.21-.254 3.01-.584a7.086 7.086 0 002.55-1.638 7.086 7.086 0 001.638-2.55c.33-.8.526-1.733.584-3.01.058-1.28.072-1.689.072-4.948s-.014-3.668-.072-4.948c-.058-1.277-.254-2.21-.584-3.01a7.092 7.092 0 00-1.638-2.55 7.092 7.092 0 00-2.55-1.637c-.8-.33-1.733-.526-3.01-.584C15.668.014 15.259 0 12 0z"/>
+        <path d="M12 5.838a6.162 6.162 0 106.162 6.162A6.162 6.162 0 0012 5.838zm0 10.162a3.999 3.999 0 113.999-3.999A4 4 0 0112 16z"/>
+        <circle cx="18.406" cy="5.594" r="1.44"/>
+      </svg>
+    </a>
+  </header>
+
+  <main>
+    <div class="image-container">
+      <img src="./imgs/ph1.jpg" alt="Pedro Henrique - lado esquerdo" class="foto-esquerda">
+      <img src="./imgs/ph.webp" alt="Pedro Henrique - lado direito" class="foto-direita">
+      <h1 class="titulo">
+        PEDRO HENRIQUE<br> OLIVEIRA
+      </h1>
+    </div>
+  </main>
+
+  <footer>
+    <a href="introducao.html" class="botao-trabalho">conhecer trabalho ➝</a>
+  </footer>
+</body>
+</html>

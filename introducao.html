@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Introdução - Pedro Henrique</title>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Anton', sans-serif;
+      background-color: #111;
+      color: #ff5722;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+    }
+
+    .menu {
+      color: #ff5722;
+      font-size: 14px;
+    }
+
+    .insta-icon {
+      font-size: 24px;
+      color: #ff5722;
+      transition: all 0.3s ease;
+      padding: 10px;
+      border-radius: 8px;
+     
+
+    }
+
+    .insta-icon:hover {
+      background: linear-gradient(135deg, #ff7043, #ff5722);
+      transform: scale(1.1);
+      box-shadow: 0 6px 14px rgba(255, 87, 34, 0.5);
+      color: #111;
+    }
+
+    .intro-section {
+      background-color: #111;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .intro-section h1 {
+      font-size: 12vw;
+      color: #ff5722;
+      text-transform: uppercase;
+      line-height: 1;
+    }
+
+    .sobre-mim {
+      background: url(laranja.png) no-repeat center center;
+      background-size: cover;
+      padding: 153px 220px;
+      position: relative;
+      text-align: left;
+    }
+
+    .texto {
+      max-width: 600px;
+      color: black;
+    }
+
+    .texto h2 {
+      font-size: 5rem;
+      color: black;
+      margin-bottom: 25px;
+      text-transform: uppercase;
+      text-shadow: 1px 1px 2px rgba(255,255,255,0.4);
+    }
+
+    .texto p {
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      line-height: 1.8;
+      text-shadow: 1px 1px 2px rgba(255,255,255,0.4);
+    }
+
+    .foto {
+      position: absolute;
+      top: 73%;
+      right: 5%;
+      transform: translateY(-50%);
+      max-width: 522px;
+    }
+
+    .foto img {
+      width: 100%;
+      object-fit: cover;
+    }
+
+    /* ===== NOVA SEÇÃO LINGUAGENS MODERNA ===== */
+    .linguagens {
+      background-color: #111;
+      padding: 80px 40px;
+      text-align: center;
+    }
+
+    .linguagens h2 {
+      font-size: 4rem;
+      color: #ff5722;
+      margin-bottom: 50px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .linguagens-lista {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .linguagem {
+      background-color: #1a1a1a;
+      border: 2px solid #ff5722;
+      border-radius: 12px;
+      padding: 30px 50px;
+      font-size: 2rem;
+      text-transform: uppercase;
+      color: #ff5722;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(255, 87, 34, 0.2);
+      min-width: 220px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      justify-content: center;
+    }
+
+    .linguagem i {
+      font-size: 2.5rem;
+    }
+
+    .linguagem:hover {
+      background-color: #ff5722;
+      color: #111;
+      transform: translateY(-8px) scale(1.05);
+      box-shadow: 0 8px 20px rgba(255, 87, 34, 0.3);
+    }
+
+    .linguagem:hover i {
+      color: #111;
+    }
+
+    /* ===== PROJETOS ===== */
+    .projetos {
+      background-color: #111;
+      padding: 60px 40px;
+      color: #fff;
+    }
+
+    .barra-progresso-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 40px;
+      max-width: 1140px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .barra-label {
+      background-color: #ff5722;
+      color: #000;
+      padding: 2px 8px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .barra-externa {
+      flex-grow: 1;
+      height: 10px;
+      background-color: #333;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .barra-interna {
+      width: 50%;
+      height: 100%;
+      background-color: #ff5722;
+      border-radius: 10px;
+    }
+
+    .progresso-texto {
+      font-size: 14px;
+      color: #ff5722;
+      margin-left: 8px;
+    }
+
+    .conteudo-projetos {
+      background-color: #000;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 1140px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .titulo-projetos {
+      font-size: 32px;
+      color: #fff;
+      text-transform: uppercase;
+    }
+
+    .subtitulo-projetos {
+      font-size: 14px;
+      color: #ccc;
+      margin-bottom: 20px;
+    }
+
+    .lista-projetos {
+      display: flex;
+      flex-direction: column;
+      gap: 17px;
+    }
+
+    .projeto {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      background-color: #111;
+      padding: 10px;
+      border-radius: 6px;
+      color: #fff;
+      justify-content: space-between;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .projeto:hover {
+      background-color: #222;
+      transform: scale(1.02);
+    }
+
+    .projeto img {
+      width: 80px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+
+    .projeto span {
+      flex-grow: 1;
+      font-size: 16px;
+    }
+
+    .status {
+      font-size: 20px;
+    }
+
+    .status.loading {
+      color: #ff9800;
+    }
+
+    .status.done {
+      color: #4caf50;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <span class="menu">PORTFÓLIO</span>
+    <a href="#" class="insta-icon"><i class="fab fa-instagram"></i></a>
+  </header>
+
+  <section class="intro-section">
+    <h1>INTRODUÇÃO</h1>
+  </section>
+
+  <section class="sobre-mim">
+    <div class="texto">
+      <h2>SOBRE MIM</h2>
+      <p>
+        OLÁ, ME CHAMO PEDRO HENRIQUE DE OLIVEIRA. EU TENHO 18 ANOS, SOU ESTUDANTE DO SENAI, ONDE ESTOU CURSANDO O CURSO DE DESENVOLVIMENTO DE SISTEMAS. FIZ ESTE PORTFÓLIO PARA APRESENTAR UM POUCO DO MEU TRABALHO.
+      </p>
+    </div>
+  </section>
+
+  <div class="foto">
+    <img src="./imgs/ph.webp" alt="Foto de Pedro Henrique">
+  </div>
+
+  <!-- ===== SEÇÃO LINGUAGENS MODERNA ===== -->
+  <section class="linguagens">
+    <h2>Linguagens Dominantes</h2>
+    <div class="linguagens-lista">
+      <div class="linguagem"><i class="fab fa-html5"></i>HTML</div>
+      <div class="linguagem"><i class="fab fa-css3-alt"></i>CSS</div>
+      <div class="linguagem"><i class="fab fa-python"></i>Python</div>
+    </div>
+  </section>
+
+  <!-- ===== SEÇÃO PROJETOS ===== -->
+  <section class="projetos">
+    <div class="conteudo-projetos">
+      <h2 class="titulo-projetos">PROJETOS</h2>
+      <p class="subtitulo-projetos">2 Projetos</p>
+
+      <div class="lista-projetos">
+        <a href="projeto1.html" class="projeto">
+          <img src="./imgs/roblox.png" alt="Thumb Projeto 1">
+          <span>Projeto 1</span>
+          <span class="status loading">⏳</span>
+        </a>
+
+        <a href="projeto2.html" class="projeto">
+          <img src="./imgs/404.png" alt="Thumb Projeto 2">
+          <span>Projeto 2 : APARTAMENTO 404</span>
+          <span class="status done">✔️</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>

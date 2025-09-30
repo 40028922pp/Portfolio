@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projeto 1</title>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Anton', sans-serif;
+      background-color: #111;
+      color: #ff5722;
+      line-height: 1.5;
+      overflow-x: hidden;
+    }
+
+    .container {
+      padding: 40px 60px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .projetos-subtitulo {
+      font-size: 14px;
+      text-transform: uppercase;
+      color: #ff5722;
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+    }
+
+    .projetos-titulo {
+      font-size: 5rem;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+      color: #ff5722;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: slideUp 1s forwards 0.5s;
+    }
+
+    .imagem-projeto {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 60px;
+      opacity: 0;
+      animation: fadeInScale 1s forwards 1s;
+    }
+
+    .imagem-projeto img {
+      width: 100%;
+      max-width: 1400px;
+      height: auto;
+      border-radius: 0;
+      box-shadow: none;
+      transition: transform 0.3s ease;
+    }
+
+    .imagem-projeto img:hover {
+      transform: scale(1.02);
+    }
+
+    /* Seção Sobre o Projeto */
+    .sobre-projeto {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 40px;
+      align-items: start;
+      margin-bottom: 60px;
+      opacity: 0;
+      transform: translateY(40px);
+      animation: slideUp 1s forwards 1.5s;
+    }
+
+    .sobre-projeto h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      color: #ff5722;
+    }
+
+    .admin-info {
+      text-align: center;
+    }
+
+    .admin-info img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      transition: transform 0.4s ease;
+    }
+
+    .admin-info img:hover {
+      transform: scale(1.1);
+    }
+
+    .admin-info p {
+      font-size: 0.8rem;
+      color: #ff5722;
+      text-transform: uppercase;
+    }
+
+    .sobre-texto {
+      font-size: 0.95rem;
+      color: #ff5722;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    .recursos {
+      margin-top: 40px;
+    }
+
+    .recurso {
+      border-top: 1px solid #ff5722;
+      padding: 20px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      transition: background 0.3s ease, padding-left 0.3s ease;
+      text-decoration: none; /* Para links */
+      color: #ff5722;
+    }
+
+    .recurso:last-child {
+      border-bottom: 1px solid #ff5722;
+    }
+
+    .recurso:hover {
+      background: rgba(255, 87, 34, 0.1);
+      padding-left: 10px;
+    }
+
+    .recurso h3 {
+      margin: 0;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      color: #ff5722;
+    }
+
+    .recurso span {
+      font-size: 1.5rem;
+      color: #ff5722;
+    }
+
+    /* Botão Voltar */
+    .botao-voltar {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 30px;
+      font-size: 1rem;
+      text-transform: uppercase;
+      color: #ff5722;
+      border: 2px solid #ff5722;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .botao-voltar:hover {
+      background-color: #ff5722;
+      color: #111;
+    }
+
+    /* Animações */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInScale {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @media (max-width: 768px) {
+      .projetos-titulo {
+        font-size: 3rem;
+      }
+
+      .container {
+        padding: 20px;
+      }
+
+      .sobre-projeto {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="projetos-subtitulo">PROJETOS</div>
+    <div class="projetos-titulo">PROJETO 1</div>
+
+    <div class="imagem-projeto">
+      <img src="./imgs/roblox1.png" alt="Imagem do Projeto 1">
+    </div>
+
+    <!-- Sobre o Projeto -->
+    <section class="sobre-projeto">
+      <div class="admin-info">
+        <h2>Sobre o Projeto</h2>
+        <img src="./ss/ph.webp" alt="Administrador do projeto">
+        <p>Administrado por<br>Pedro H. e Companhia</p>
+      </div>
+
+      <div>
+        <p class="sobre-texto">
+          Este projeto foi feito com base o roblox , onde eu tive uma ideia inicial de fazer um jogo em típico do Roblox que é passar por obstáulos.
+        </p>
+        <p class="sobre-texto">
+         ideia muito genérica para um jogo com os jogos do roblox , então evolui para o segundo projeto.
+         
+        </p>
+
+        <div class="recursos">
+          <a href="projeto2.html" class="recurso">
+            <h3>projeto 2</h3>
+            <span>+</span>
+          </a>
+        </div>
+
+        <!-- Botão Voltar para Introdução -->
+        <a href="introducao.html" class="botao-voltar">Voltar para Introdução</a>
+
+      </div>
+    </section>
+  </div>
+
+</body>
+</html>
